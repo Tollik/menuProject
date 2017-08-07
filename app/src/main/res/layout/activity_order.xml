@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/orderActivityLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_art"
+    tools:context="com.medved.mymenuapp_1.OrderActivity">
+
+
+    <TextView
+        android:id="@+id/billTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#A0C140"
+        android:text="Bill Total : "
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/billTotal"
+        android:textColor="#000"
+        android:textSize="30sp"
+        android:background="#A0C140"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:textColor="#5F2813"
+        android:textStyle="bold"
+        android:text="Confirm"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:background="@drawable/btn_white"
+        android:onClick="confirmBtn"
+
+        />
+
+
+
+    <ScrollView
+        android:id="@+id/orderActivityScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/totalPrice">
+
+        <LinearLayout
+            android:id="@+id/orderList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
